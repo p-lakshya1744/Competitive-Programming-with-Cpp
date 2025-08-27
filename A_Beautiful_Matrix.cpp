@@ -41,7 +41,7 @@ int main(){
 
     int count = 0;
 
-    while(a!=2 && b!=2){
+    while(a!=2 || b!=2){
         if(a>2){
             a--;
             count++;
