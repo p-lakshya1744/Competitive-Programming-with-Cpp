@@ -23,7 +23,7 @@ int main(){
 
     string ans = "";
 
-    for(int i = 0 ; i<input.length()-1 ; i++){
+    for(int i = 0 ; i<input.length() ; i++){
         if(input[i]=='.'){
             ans += '0';
         }
@@ -31,14 +31,16 @@ int main(){
             char ch = input[i+1];
             if(ch=='.'){
                 ans += '1';
+                i++;
             }
             else{
                 ans += '2';
+                i++;
             }
         }
     }
 
-    cout << stoi(ans);
+    cout << ans;
 
     return 0;
 }
