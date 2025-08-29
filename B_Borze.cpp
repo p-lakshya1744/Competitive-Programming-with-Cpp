@@ -21,24 +21,24 @@ int main(){
     string input;
     cin >> input;
 
-    vector <int> nums;
+    string ans = "";
 
     for(int i = 0 ; i<input.length()-1 ; i++){
         if(input[i]=='.'){
-            nums.push_back(0);
+            ans += '0';
         }
         else{
             char ch = input[i+1];
             if(ch=='.'){
-                nums.push_back(1);
+                ans += '1';
             }
             else{
-                nums.push_back(2);
+                ans += '2';
             }
         }
     }
 
-    
+    cout << stoi(ans);
 
     return 0;
 }
