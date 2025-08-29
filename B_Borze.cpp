@@ -11,3 +11,13 @@ Output the decoded ternary number. It can have leading zeroes.
 */
 
 
+# include <iostream>
+# include <string>
+
+using namespace std;
+
+int main(){
+    
+
+    return 0;
+}
