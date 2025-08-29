@@ -17,7 +17,12 @@ Output the decoded ternary number. It can have leading zeroes.
 using namespace std;
 
 int main(){
-    
+    string input;
+    cin >> input;
+
+    for(char val: input){
+        if(val==)
+    }
 
     return 0;
 }
