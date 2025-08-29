@@ -12,6 +12,7 @@ Output the decoded ternary number. It can have leading zeroes.
 
 
 # include <iostream>
+# include <vector>
 # include <string>
 
 using namespace std;
@@ -20,9 +21,24 @@ int main(){
     string input;
     cin >> input;
 
-    for(char val: input){
-        if(val==)
+    vector <int> nums;
+
+    for(int i = 0 ; i<input.length()-1 ; i++){
+        if(input[i]=='.'){
+            nums.push_back(0);
+        }
+        else{
+            char ch = input[i+1];
+            if(ch=='.'){
+                nums.push_back(1);
+            }
+            else{
+                nums.push_back(2);
+            }
+        }
     }
+
+    
 
     return 0;
 }
