@@ -14,10 +14,20 @@ Print a single integer — the minimum year number that is strictly larger than 
 */
 
 # include <iostream>
+# include <string>
+# include <set>
+
 using namespace std;
 
 bool isNotDistinct(int year){
-    
+    string str = to_string(year);
+    set <char> digits(str.begin(), str.end());
+    if(digits.size()!=str.size()){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 int main(){
