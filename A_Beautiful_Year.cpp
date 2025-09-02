@@ -12,3 +12,15 @@ Output
 Print a single integer — the minimum year number that is strictly larger than y and all it's digits are distinct. It is guaranteed that the answer exists.
 
 */
+
+# include <iostream>
+using namespace std;
+
+int main(){
+    int year;
+    cin >> year;
+
+    
+
+    return 0;
+}
