@@ -16,6 +16,10 @@ Print a single integer — the minimum year number that is strictly larger than 
 # include <iostream>
 using namespace std;
 
+bool isNotDistinct(int year){
+    
+}
+
 int main(){
     int year;
     cin >> year;
@@ -23,7 +27,7 @@ int main(){
     do{
         year++;
     }
-    while();
+    while(isNotDistinct(year));
 
     cout << year;
 
