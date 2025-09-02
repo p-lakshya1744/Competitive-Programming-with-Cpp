@@ -29,9 +29,14 @@ int main(){
         }
     }
 
-    for(int i=0 ; i<3 ; i++){
-        for(int j=0 ; j<3 ; j++){
-            
+    for(int i=0 ; i<mat.size() ; i++){
+        for(int j=0 ; j<mat[i].size() ; j++){
+            if(mat[i][j]%2==0){
+                cout << '0';
+            }
+            else{
+                cout << '1';
+            }
         }
     }    
 
