@@ -19,11 +19,21 @@ Print three lines, each containing three characters. The j-th character of the i
 using namespace std;
 
 int main(){
+    int press;
+    vector <vector <int>> mat;
+
+    for(int i=0 ; i<3 ; i++){
+        for(int j=0 ; j<3 ; j++){
+            cin >> press;
+            mat[i][j]=press;
+        }
+    }
+
     for(int i=0 ; i<3 ; i++){
         for(int j=0 ; j<3 ; j++){
             
         }
-    }
+    }    
 
     return 0;
 }
