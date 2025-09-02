@@ -14,6 +14,16 @@ Print three lines, each containing three characters. The j-th character of the i
 */
 
 # include <iostream>
+# include <vector>
 
+using namespace std;
 
+int main(){
+    for(int i=0 ; i<3 ; i++){
+        for(int j=0 ; j<3 ; j++){
+            
+        }
+    }
 
+    return 0;
+}
