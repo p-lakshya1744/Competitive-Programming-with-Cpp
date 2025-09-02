@@ -20,7 +20,12 @@ int main(){
     int year;
     cin >> year;
 
-    
+    do{
+        year++;
+    }
+    while();
+
+    cout << year;
 
     return 0;
 }
