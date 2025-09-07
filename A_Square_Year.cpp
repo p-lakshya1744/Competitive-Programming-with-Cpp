@@ -22,3 +22,9 @@ Two numbers a and b (a,b≥0) such that (a+b)2=s, if they exist. If there are mu
 The number −1 otherwise.
 
 */
+
+# include <iostream>
+# include <string>
+
+using namespace std;
+
