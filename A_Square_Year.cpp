@@ -25,6 +25,7 @@ The number −1 otherwise.
 
 # include <iostream>
 # include <string>
+# include <cmath>
 
 using namespace std;
 
@@ -36,41 +37,43 @@ int main(){
 
     for(int i=0 ; i<t ; i++){
         cin >> n;
-    }
 
-    int start = 0;
-    int end = 100;
+        int start = 0;
+        int end = 100;
 
-    int ans;
-    double root = sqrt(stoi(n));
+        int ans;
+        double root = sqrt(stoi(n));
 
-    while(end - start > 1){
-        int mid = start + ((end-start)/2);
+        while(end - start > 1){
+            int mid = start + ((end-start)/2);
 
-        if(root >= mid){
-            start = mid;
+            if(root >= mid){
+                start = mid;
+            }
+            else{
+                end = mid;
+            }
+        }
+
+        if(root = start){
+            ans = start;
+        }
+        else if(root = end){
+            ans = end;
         }
         else{
-            end = mid;
+            ans = -1;
+        }
+
+        if(ans!=-1){
+            cout << 1 << " " << ans-1;
+        }
+        else{
+            cout << ans;
         }
     }
 
-    if(root = start){
-        ans = start;
-    }
-    else if(root = end){
-        ans = end;
-    }
-    else{
-        ans = -1;
-    }
-
-    if(ans!=-1){
-        cout << 1 << " " << ans-1;
-    }
-    else{
-        cout << ans;
-    }
+    
 
     return 0;
 }
