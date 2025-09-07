@@ -17,3 +17,21 @@ For each test case, output one integer — the day on which Monocarp will have w
 
 */
 
+# include <iostream>
+using namespace std;
+
+int t, n;
+
+bool isComplete(int d){
+
+}
+
+int main(){
+    cin >> t;
+
+    for(int i=0 ; i<t ; i++){
+        
+    }
+
+    return 0;
+}
