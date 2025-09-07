@@ -19,26 +19,6 @@ Print three lines, each containing three characters. The j-th character of the i
 using namespace std;
 
 int main(){
-    int press;
-    vector <vector <int>> mat;
-
-    for(int i=0 ; i<3 ; i++){
-        for(int j=0 ; j<3 ; j++){
-            cin >> press;
-            mat[i][j]=press;
-        }
-    }
-
-    for(int i=0 ; i<mat.size() ; i++){
-        for(int j=0 ; j<mat[i].size() ; j++){
-            if(mat[i][j]%2==0){
-                cout << '0';
-            }
-            else{
-                cout << '1';
-            }
-        }
-    }    
 
     return 0;
 }
