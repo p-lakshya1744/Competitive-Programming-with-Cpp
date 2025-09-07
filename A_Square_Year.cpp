@@ -33,9 +33,8 @@ int main(){
     int t;
     cin >> t;
 
-    string n;
-
     for(int i=0 ; i<t ; i++){
+        string n;
         cin >> n;
 
         int start = 0;
@@ -44,36 +43,32 @@ int main(){
         int ans;
         double root = sqrt(stoi(n));
 
-        while(end - start > 1){
-            int mid = start + ((end-start)/2);
+        if(int(root)==root){
+            while(start<=end){
+                int mid = start + ((end-start)/2);
 
-            if(root >= mid){
-                start = mid;
+                if(root == mid){
+                    ans = mid;
+                }
+                else if(root>mid){
+                    start = mid+1;
+                }
+                else{
+                    end = mid-1;
+                }
             }
-            else{
-                end = mid;
-            }
-        }
 
-        if(root = start){
-            ans = start;
-        }
-        else if(root = end){
-            ans = end;
+            int ans1 = stoi(n.substr(0, 2));
+            int ans2 = stoi(n.substr(2, 2));
+
+            if(ans1+ans2 == root){
+                cout << ans1 << " " << ans2 << endl;
+            }
         }
         else{
-            ans = -1;
-        }
-
-        if(ans!=-1){
-            cout << 1 << " " << ans-1;
-        }
-        else{
-            cout << ans;
+            cout << -1 << endl;
         }
     }
-
-    
 
     return 0;
 }
