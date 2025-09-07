@@ -28,3 +28,49 @@ The number −1 otherwise.
 
 using namespace std;
 
+int main(){
+    int t;
+    cin >> t;
+
+    string n;
+
+    for(int i=0 ; i<t ; i++){
+        cin >> n;
+    }
+
+    int start = 0;
+    int end = 100;
+
+    int ans;
+    double root = sqrt(stoi(n));
+
+    while(end - start > 1){
+        int mid = start + ((end-start)/2);
+
+        if(root >= mid){
+            start = mid;
+        }
+        else{
+            end = mid;
+        }
+    }
+
+    if(root = start){
+        ans = start;
+    }
+    else if(root = end){
+        ans = end;
+    }
+    else{
+        ans = -1;
+    }
+
+    if(ans!=-1){
+        cout << 1 << " " << ans-1;
+    }
+    else{
+        cout << ans;
+    }
+
+    return 0;
+}
