@@ -20,17 +20,48 @@ For each test case, output one integer — the day on which Monocarp will have w
 # include <iostream>
 using namespace std;
 
-int t, n;
+int t;
+long long n;
+int a, b, c;
 
 bool isComplete(int d){
+    long long cycles = d / 3;
+    long long sum = cycles * (a + b + c);
 
+    int rem = d % 3;
+    if (rem >= 1) sum += a;
+    if (rem >= 2) sum += b;
+
+    return sum >= n;
 }
 
 int main(){
     cin >> t;
 
     for(int i=0 ; i<t ; i++){
-        
+        cin >> n;
+        cin >> a >> b >> c;
+
+        int start = 0;
+        int end = 1e9;
+
+        while(end-start > 1){
+            int mid = start + ((end-start)/2);
+
+            if(!isComplete(mid)){
+                start = mid+1;
+            }
+            else{
+                end = mid;
+            }
+        }
+
+        if(isComplete(start)){
+            cout << start << endl;
+        }
+        else if(isComplete(end)){
+            cout << end << endl;
+        }
     }
 
     return 0;
