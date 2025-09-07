@@ -49,6 +49,7 @@ int main(){
 
                 if(root == mid){
                     ans = mid;
+                    break;
                 }
                 else if(root>mid){
                     start = mid+1;
@@ -63,6 +64,9 @@ int main(){
 
             if(ans1+ans2 == root){
                 cout << ans1 << " " << ans2 << endl;
+            }
+            else{
+                cout << 1 << " " << ans-1 << endl;
             }
         }
         else{
